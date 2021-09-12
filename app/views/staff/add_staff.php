@@ -30,7 +30,8 @@
 		          	</div>
 		          	<!-- /.card-header -->
 		          	<!-- form start -->
-		          	<form class="form-horizontal">
+		          	<form action="<?= BASE_URL; ?>/staff/add_process" method="post" enctype="multipart/form-data" class="form-horizontal">
+		          		<?php Flasher::flash(); ?>
 		            	<div class="card-body">
 		            		<!-- Nama Karyawan -->
 			              	<div class="form-group row">
@@ -43,9 +44,9 @@
 
 		              		<!-- Jenis Kelamin -->
 			              	<div class="form-group row">
-			                	<label for="peringkat" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+			                	<label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
 			                	<div class="col-sm-10">
-			                		<select class="form-control select2" name="peringkat" style="width: 100%;">
+			                		<select class="form-control select2" name="jenis_kelamin" style="width: 100%;">
 			                			<option value="laki-laki">Laki-laki</option>
 			                			<option value="perempuan">Perempuan</option>
 			                		</select>
@@ -66,7 +67,7 @@
 			                <div class="form-group row">
 			                  <label for="tanggal_lahir" class="col-sm-2 col-form-label">Tanggal Lahir:</label>
 			                 	<div class="input-group date col-sm-10" id="tanggal_lahir" data-target-input="nearest">
-	                        <input type="text" class="form-control datetimepicker-input" data-target="#tanggal_lahir" placeholder="Format: dd-mm-yyyy" />
+	                        <input type="text" class="form-control datetimepicker-input" data-target="#tanggal_lahir" name="tanggal_lahir" placeholder="Format: dd-mm-yyyy" />
 	                        <div class="input-group-append" data-target="#tanggal_lahir" data-toggle="datetimepicker">
 	                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 	                        </div>
@@ -101,7 +102,7 @@
 			              	<div class="form-group row">
 			                	<label for="no_induk_karyawan" class="col-sm-2 col-form-label">No. Induk Karyawan</label>
 			                	<div class="col-sm-10">
-			                  		<input type="text" class="form-control" id="no_induk_karyawan" name="peringkat" placeholder="No. Induk Karyawan atau PKWT/PKH/Alih Daya">
+			                  		<input type="text" class="form-control" id="no_induk_karyawan" name="no_induk_karyawan" placeholder="No. Induk Karyawan atau PKWT/PKH/Alih Daya">
 			                	</div>
 			              	</div>
 			              	<!-- /.No. Induk Karyawan -->
@@ -212,7 +213,7 @@
 			              	<div class="form-group row">
 			                	<label for="foto_karyawan" class="col-sm-2 col-form-label">Foto Karyawan</label>
 			                	<div class="col-sm-10">
-			                  		<input type="text" class="form-control" id="foto_karyawan" name="foto_karyawan" placeholder="SD, SMP, SMA, D3, S-1, ...">
+			                  		<input type="file" class="form-control" id="foto_karyawan" name="foto_karyawan">
 			                	</div>
 			              	</div>
 			              	<!-- /.Foto Karyawan -->

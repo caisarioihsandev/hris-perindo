@@ -28,6 +28,7 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
+            <?php Flasher::flash(); ?>
             <table id="example2" class="table table-bordered table-hover">
               <thead>
               <tr>

@@ -17,7 +17,6 @@ class User extends Main_Controller
 		$data['users'] = $this->model('User_model')->get_all_users();
 
 		$this->view('view-admin/header', $data);
-		$this->view('view-admin/navbar', $data);
 		$this->view('view-admin/user', $data);
 		$this->view('view-admin/footer');
 	}
@@ -27,7 +26,6 @@ class User extends Main_Controller
 		$data['users'] = $this->model('User_model')->get_all_users();
 
 		$this->view('view-admin/header', $data);
-		$this->view('view-admin/navbar', $data);
 		$this->view('view-admin/user_add', $data);
 		$this->view('view-admin/footer');
 	}

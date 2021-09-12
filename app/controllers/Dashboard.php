@@ -15,6 +15,7 @@ class Dashboard extends Main_Controller
 
 		$data['judul'] 	= 'Dashboard';
 		$data['users'] = $this->model('User_model')->get_all_users();
+		$data['url'] = "BASE_URL";
 
 		$this->view('templates/header', $data);
 		$this->view('templates/navbar', $data);

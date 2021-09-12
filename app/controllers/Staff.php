@@ -26,6 +26,20 @@ class Staff extends Main_Controller
 		$this->view('templates/footer');
 	}
 
+	public function add_process()
+	{
+		if ($this->model('Staff_model')->add_staff($_POST, $_FILES) > 0) {
+			$data = $this->model('Staff_model')->add_staff($_POST, $_FILES);
+			Flasher::setFlash($data, 'to added', 'success');
+			header('Location: ' . BASE_URL . '/staff');
+			exit();
+		} else {
+			Flasher::setFlash('Failed', 'to added', 'danger');
+			header('Location: ' . BASE_URL . '/staff/add_staff');
+			exit();
+		}
+	}
+
 
 
 }
